@@ -5,7 +5,7 @@ import { generateWorkout, substituteExercise } from './lib/workouts';
 import { draftReply, leadsToCsv } from './lib/leads';
 
 type Exercise = { name: string; equipment: string; sets: number; reps: string };
-type Lead = { id: string; name: string; service: string; email: string; status: 'New' | 'Contacted' | 'Booked'; note: string; createdAt: string };
+type Lead = { id: string; name: string; service: string; email: string; status: 'New' | 'Contacted' | 'Qualified' | 'Booked' | 'Closed'; note: string; createdAt: string; appointmentAt?: string };
 const catalog: Exercise[] = [
   {name:'Push-ups',equipment:'Bodyweight',sets:3,reps:'12'},
   {name:'Bodyweight Squats',equipment:'Bodyweight',sets:3,reps:'15'},
